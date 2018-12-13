@@ -15,10 +15,36 @@
             </mat-menu>
           </mat-card-title>
         </mat-card-header>
-        <mat-card-content class="dashboard-card-content">
-          <div>Card Content Here</div>
+        <mat-card-content class="dashboard-card-content" *ngIf="card.type === 'tacos'">
+          <div *ngFor="let taco of tacos">
+            <ul>
+              <li>{{ taco.title }}</li> 
+              <li><span *ngIf="taco.description">Description :</span> {{ taco.description }}</li> 
+              <li>Prix : {{ taco.price | currency: 'EUR' }}</li>
+            </ul>
+          </div>
+        </mat-card-content>
+        <mat-card-content class="dashboard-card-content" *ngIf="card.type === 'chips'">
+          <div *ngFor="let chip of chips">
+            <ul>
+              <li>{{ chip.title }}</li>
+              <li><span *ngIf="chip.description">Description :</span> {{ chip.description }}</li>
+              <li>Prix : {{ chip.price | currency: 'EUR' }}</li>
+            </ul>
+          </div>
+        </mat-card-content>
+        <mat-card-content class="dashboard-card-content" *ngIf="card.type === 'coffees'">
+          <div *ngFor="let coffee of coffees">
+            <ul>
+              <li>{{ coffee.title }}</li>
+              <li><span *ngIf="coffee.description">Description :</span> {{ coffee.description }}</li>
+              <li>Prix : {{ coffee.price | currency: 'EUR' }}</li>
+            </ul>
+          </div>
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>
   </mat-grid-list>
 </div>
+
+

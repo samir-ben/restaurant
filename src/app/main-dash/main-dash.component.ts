@@ -15,18 +15,16 @@ export class MainDashComponent implements OnInit {
     map(({ matches }) => {
       if (matches) {
         return [
-          { title: 'La carte', cols: 2, rows: 1 },
-          { title: 'Tacos', cols: 2, rows: 1 },
-          { title: 'Chips', cols: 2, rows: 1 },
-          { title: 'Boissons, cafés et desserts', cols: 2, rows: 1 }
+          { title: 'Tacos', cols: 2, rows: 1, type: 'tacos' },
+          { title: 'Chips', cols: 2, rows: 1, type: 'chips' },
+          { title: 'Boissons, cafés et desserts', cols: 2, rows: 1, type: 'coffees' }
         ];
       }
 
       return [
-        { title: 'La carte', cols: 2, rows: 1 },
-        { title: 'Tacos', cols: 1, rows: 1 },
-        { title: 'Chips', cols: 1, rows: 2 },
-        { title: 'Boissons, cafés et desserts', cols: 1, rows: 1 }
+        { title: 'Tacos', cols: 2, rows: 1, type: 'tacos' },
+        { title: 'Chips', cols: 1, rows: 2, type: 'chips' },
+        { title: 'Boissons, cafés et desserts', cols: 1, rows: 1, type: 'coffees' }
       ];
     })
   );

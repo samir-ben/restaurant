@@ -8,6 +8,7 @@
   left: 15px;
   right: 15px;
   bottom: 15px;
+  max-height: 350px;
 }
 
 .more-button {
@@ -16,6 +17,10 @@
   right: 10px;
 }
 
-.dashboard-card-content {
-  text-align: center;
+.dashboard-card-content{
+  text-align: justify;
 }
+
+.dashboard-card-content li {
+  list-style: none;
+} 
