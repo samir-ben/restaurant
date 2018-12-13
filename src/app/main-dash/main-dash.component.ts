@@ -1,13 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
+import { Food } from '../models/food.interface';
+import { QuickLunchService } from '../services/quick-lunch.service';
 
 @Component({
   selector: 'app-main-dash',
   templateUrl: './main-dash.component.html',
   styleUrls: ['./main-dash.component.css'],
 })
-export class MainDashComponent {
+export class MainDashComponent implements OnInit {
   /** Based on the screen size, switch from standard to one column per row */
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(({ matches }) => {
@@ -29,5 +31,16 @@ export class MainDashComponent {
     })
   );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  tacos: Food[];
+  chips: Food[];
+  coffees: Food[];
+
+  constructor(private breakpointObserver: BreakpointObserver, private quickLunchService: QuickLunchService ) {}
+
+  ngOnInit() {
+    this.tacos = this.quickLunchService.getTacos();
+    this.chips = this.quickLunchService.getChips();
+    this.coffees = this.quickLunchService.getCoffees();
+  }
+
 }
