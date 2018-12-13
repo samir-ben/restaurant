@@ -6,7 +6,7 @@ import { Food } from '../models/food.interface';
 })
 export class QuickLunchService {
 
-  constructor() { }
+  
 
   tacos: Food[] = [
     { id: 1, title: 'Uno', description: '1 viande, tomate, salade iceberg, oigons rouges, sauce maison', price: 5.50 },
@@ -26,4 +26,21 @@ export class QuickLunchService {
     { id: 2, title: 'Mocha', price: 2.50 },
     { id: 2, title: 'Café long', price: 1.00 }
   ];
+
+  constructor() { }
+
+  getTacos(): Food[] {
+    return this.tacos;
+  }
+
+  getChips(): Food[] {
+    return this.chips;
+  }
+
+  getCoffees(): Food[] {
+    return this.coffees;
+  }
+
+
+
 }
