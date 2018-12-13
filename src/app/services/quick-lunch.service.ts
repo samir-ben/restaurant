@@ -6,8 +6,6 @@ import { Food } from '../models/food.interface';
 })
 export class QuickLunchService {
 
-  
-
   tacos: Food[] = [
     { id: 1, title: 'Uno', description: '1 viande, tomate, salade iceberg, oigons rouges, sauce maison', price: 5.50 },
     { id: 2, title: 'Dos', description: '2 viandes, cheddar, tomate, salade iceberg, oignons rouges, sauce maison', price: 6.50 },
