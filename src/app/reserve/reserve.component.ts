@@ -21,6 +21,8 @@ export class ReserveComponent implements OnInit {
     phone: ''
   };
 
+  isScheduleOk = false;
+
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
@@ -36,6 +38,11 @@ export class ReserveComponent implements OnInit {
   }
   finalizeReservation(value) {
     console.log(value);
+  }
+  saveReservation() {
+    if (this.reservationForm.valid) {
+      this.isScheduleOk = true;
+    }
   }
 
 }
