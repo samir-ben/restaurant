@@ -1,8 +1,22 @@
 <form [formGroup]="reservationForm">
   <mat-form-field>
-    <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="date">
+    <input matInput [matDatepicker]="picker" placeholder="Choisir une date de réservation" formControlName="date">
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker startView="year" [startAt]="date"></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select placeholder="Heure de réservation" formControlName="time">
+      <mat-option *ngFor="let time of timeOptions" [value]="time">
+        {{time}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select placeholder="Heure de réservation" formControlName="people">
+      <mat-option *ngFor="let people of peopleOptions" [value]="people">
+        {{people}}
+      </mat-option>
+    </mat-select>
   </mat-form-field>
 </form>
 
