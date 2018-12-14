@@ -20,3 +20,19 @@
   </mat-form-field>
 </form>
 
+<form #f="ngForm" (submit)='finalizeReservation(f.value)'>
+  <mat-form-field>
+    <input matInput type="text" placeholder="Prénom" name="firstName" [(ngModel)]="customer.firstName">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text" placeholder="Nom" name="lastName" [(ngModel)]="customer.lastName">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text" placeholder="Email" name="email" [(ngModel)]="customer.email">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text" placeholder="Téléphone" name="phone" [(ngModel)]="customer.phone">
+  </mat-form-field>
+  <button mat-button type="submit">Réserver</button>
+</form>
+
