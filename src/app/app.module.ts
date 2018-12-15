@@ -32,11 +32,13 @@ import { ReserveComponent } from './reserve/reserve.component';
 import { ContactComponent } from './contact/contact.component';
 import { MainDashComponent } from './main-dash/main-dash.component';
 import { DishTableComponent } from './dish-table/dish-table.component';
+import { ScheduleComponent } from './schedule/schedule.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'carte', component: CarteComponent },
   { path: 'reserve', component: ReserveComponent },
+  { path: 'schedule', component: ScheduleComponent },
   { path: 'contact', component: ContactComponent }
 ];
 
@@ -49,7 +51,8 @@ const routes: Routes = [
     ReserveComponent,
     ContactComponent,
     MainDashComponent,
-    DishTableComponent
+    DishTableComponent,
+    ScheduleComponent
   ],
   imports: [
     BrowserModule,
