@@ -1,0 +1,9 @@
+.schedule-component{
+    position: relative;
+    margin: 15px 25px;
+}
+
+.card-event{
+    position: relative;
+    margin: 15px auto;
+}

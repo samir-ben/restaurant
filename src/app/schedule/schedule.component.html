@@ -1,2 +1,21 @@
-<input type="text" [formControl]="searchTerm" placeholder="Fifa, NBA 2K, MAtch de foot...">
-<div>{{result | json }}</div>
+<div class="schedule-component">
+    <h2>Soirées à thèmes</h2>
+    <form>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Fifa, NBA2K, Soirée foot..." [formControl]="searchTerm">
+        </mat-form-field>
+    </form>
+    <div *ngIf="result.length > 0">
+        <mat-card *ngFor="let res of result" class="card-event">
+            <mat-card-header>
+                <mat-card-title>{{res.title}}</mat-card-title>
+                <mat-card-subtitle>{{res.date}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <p>
+                    {{res.description}}
+                </p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

@@ -3,6 +3,7 @@ import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { debounceTime, tap, switchMap} from 'rxjs/operators';
 import { ScheduleService } from '../services/schedule.service';
+import { EveningEvent } from '../models/evening-events.interface';
 
 @Component({
   selector: 'app-schedule',
@@ -13,7 +14,7 @@ export class ScheduleComponent implements OnInit {
 
   searchTerm = new FormControl();
   searchTerms$: Observable<string> = this.searchTerm.valueChanges;
-  result = null;
+  result: EveningEvent[] = [];
 
   constructor(private scheduleService: ScheduleService) { }
 
