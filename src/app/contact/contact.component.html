@@ -1,3 +1,11 @@
-<p>
-  contact works!
-</p>
+<app-phone *ngFor="let contact of contacts" 
+  [firstName]='contact.firstName' 
+  [lastName]='contact.lastName'
+  [role]='contact.role'
+  [phone]='contact.phone'
+  (phoneNumber)="receivedPhone($event)"
+  >
+</app-phone>
+<div *ngIf='phoneZoom' class='zoom'>
+   <p>{{phoneZoom}}</p>
+</div>

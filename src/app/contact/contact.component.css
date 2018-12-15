@@ -1,0 +1,9 @@
+.zoom{
+    margin: 20px;
+    border: 10px solid #3e51b5;
+}
+.zoom p{
+    font-size: 3em;
+    text-align: center;
+    font-weight: bold;
+}

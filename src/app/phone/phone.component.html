@@ -1,0 +1,11 @@
+<div class="phone-component">
+    <mat-card class="card-phone">
+      <mat-card-header>
+        <mat-card-title>{{firstName}} {{lastName}} </mat-card-title>
+        <mat-card-subtitle>{{role}}</mat-card-subtitle>
+        <mat-card-subtitle>
+          Tel : {{phone}}  <button mat-raised-button color="primary" (click)="callbackPhone()">Zoom</button>
+        </mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+</div>
