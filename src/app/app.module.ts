@@ -35,13 +35,15 @@ import { MainDashComponent } from './main-dash/main-dash.component';
 import { DishTableComponent } from './dish-table/dish-table.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { PhoneComponent } from './phone/phone.component';
+import { PageNoFoundComponent } from './page-no-found/page-no-found.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'carte', component: CarteComponent },
   { path: 'reserve', component: ReserveComponent },
   { path: 'schedule', component: ScheduleComponent },
-  { path: 'contact', component: ContactComponent }
+  { path: 'contact', component: ContactComponent },
+  { path: '**', component: PageNoFoundComponent }
 ];
 
 @NgModule({
@@ -55,7 +57,8 @@ const routes: Routes = [
     MainDashComponent,
     DishTableComponent,
     ScheduleComponent,
-    PhoneComponent
+    PhoneComponent,
+    PageNoFoundComponent
   ],
   imports: [
     BrowserModule,
